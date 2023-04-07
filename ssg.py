@@ -3,9 +3,8 @@ from ssg.site import Site
 
 
 def main(source="content", dest="dist"):
-    config = dict(source=source, dest=dest)
-    s = Site(**config)
-    s.build()
+    config = {source: source, dest: dest}
+    Site(**config).build()
 
 
 typer.run(function=main)
